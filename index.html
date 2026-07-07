@@ -528,6 +528,13 @@
       color: var(--gold3); text-transform: uppercase;
       white-space: nowrap;
     }
+    a.pub-item { cursor: pointer; }
+    .pub-right { display: flex; align-items: center; gap: 1rem; }
+    .pub-arrow {
+      font-size: 0.9rem; color: var(--gold3);
+      transition: transform 0.3s, color 0.3s;
+    }
+    a.pub-item:hover .pub-arrow { color: var(--gold); transform: translate(3px, -3px); }
 
     /* ─── Contact ────────────────────────────────────────────── */
     #contact {
@@ -1122,26 +1129,40 @@
         <div class="section-rule"></div>
       </div>
       <div class="pub-list">
-        <div class="pub-item reveal">
+        <a class="pub-item reveal" href="https://www.innovatixinc.com/rpa-automated-exchange-rates-monitoring-alert/" target="_blank" rel="noopener">
           <div class="pub-title">Automated Monitoring of Foreign Exchange Rates using RPA</div>
-          <div class="pub-org">Innovatix Technology Partners</div>
-        </div>
-        <div class="pub-item reveal reveal-delay-1">
+          <div class="pub-right">
+            <div class="pub-org">Innovatix Technology Partners</div>
+            <div class="pub-arrow">↗</div>
+          </div>
+        </a>
+        <a class="pub-item reveal reveal-delay-1" href="https://www.innovatixinc.com/effective-project-management-strategies-for-offshore-resources/" target="_blank" rel="noopener">
           <div class="pub-title">Effective Project Management Strategies for Offshore Resources</div>
-          <div class="pub-org">Innovatix Technology Partners</div>
-        </div>
-        <div class="pub-item reveal reveal-delay-2">
+          <div class="pub-right">
+            <div class="pub-org">Innovatix Technology Partners</div>
+            <div class="pub-arrow">↗</div>
+          </div>
+        </a>
+        <a class="pub-item reveal reveal-delay-2" href="https://www.innovatixinc.com/agile-vs-waterfall-choosing-the-right-methodology/" target="_blank" rel="noopener">
           <div class="pub-title">Agile vs. Waterfall: Choosing the Right Methodology for IT Projects</div>
-          <div class="pub-org">Innovatix Technology Partners</div>
-        </div>
+          <div class="pub-right">
+            <div class="pub-org">Innovatix Technology Partners</div>
+            <div class="pub-arrow">↗</div>
+          </div>
+        </a>
         <div class="pub-item reveal reveal-delay-3">
           <div class="pub-title">MS Power Automate Desktop — Capabilities and How to Use It</div>
-          <div class="pub-org">Innovatix Technology Partners</div>
+          <div class="pub-right">
+            <div class="pub-org">Innovatix Technology Partners</div>
+          </div>
         </div>
-        <div class="pub-item reveal reveal-delay-4">
+        <a class="pub-item reveal reveal-delay-4" href="https://www.innovatixinc.com/power-automate-ai-builder/" target="_blank" rel="noopener">
           <div class="pub-title">Power Automate AI Builder and Scenarios</div>
-          <div class="pub-org">Innovatix Technology Partners</div>
-        </div>
+          <div class="pub-right">
+            <div class="pub-org">Innovatix Technology Partners</div>
+            <div class="pub-arrow">↗</div>
+          </div>
+        </a>
       </div>
     </div>
   </section>
