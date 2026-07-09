@@ -374,6 +374,7 @@ def main():
         'PSM I - Professional Scrum Master (Scrum.org)',
         'PSPO I - Professional Scrum Product Owner (Scrum.org)',
         'AWS Certified Cloud Practitioner',
+        'Microsoft Data Science Professional Program - Microsoft',
     ]:
         d.bullet(cert)
 
