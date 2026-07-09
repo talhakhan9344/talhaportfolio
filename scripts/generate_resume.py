@@ -190,7 +190,7 @@ def main():
         'Technical Project Manager — currently at Innovatix Technology '
         'Partners, where I lead AI-assisted development and end-to-end '
         'product launches, from OpenParser AI to the Innovatix ATS '
-        'platform, using tools like Claude, Cursor, and ChatGPT/Copilot '
+        'platform, using tools like Claude, Cursor, ChatGPT, and Copilot '
         'across my team. With 9+ years of '
         'professional experience (8+ in technology), I’ve paired account '
         'stewardship with delivery excellence across AI and Healthcare '
