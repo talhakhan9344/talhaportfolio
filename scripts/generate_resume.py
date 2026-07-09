@@ -189,14 +189,14 @@ def main():
     # ── Executive Summary ──────────────────────────────────────────
     d.section('EXECUTIVE SUMMARY')
     d.para(
-        'Technical Project Manager — currently at Innovatix Technology '
+        'Technical Project Manager, currently at Innovatix Technology '
         'Partners, where I lead AI-assisted development and end-to-end '
         'product launches, from OpenParser AI to the Innovatix ATS '
         'platform, using tools like Claude, Cursor, ChatGPT, and Copilot '
         'across my team. With 8+ years of '
         'professional experience, all in technology, I’ve paired account '
         'stewardship with delivery excellence across AI and Healthcare '
-        'portfolios — leading international, cross-border teams, with '
+        'portfolios, leading international, cross-border teams, with '
         'the technical fluency to partner closely with engineering and '
         'the executive presence to align C-suite stakeholders, often in '
         'the same conversation.')
@@ -212,25 +212,24 @@ def main():
              'LLM Product Development (RAG Pipelines, Prompt Engineering, '
              'AI Agents, Evals), Llama 3, OpenAI, Anthropic, Gemini APIs, '
              'Pinecone, LlamaIndex, Python, Pandas, Scikit-Learn, SQL, '
-             'Power BI, Tableau, QuickSight, Snowflake')
+             'Power BI, Tableau, Snowflake')
     d.skills('Cloud & Infrastructure',
              'AWS Lambda, API Gateway, S3, RDS, CI/CD, .NET, '
              'Microservices, Azure, Power Platform')
     d.skills('Automation',
-             'RPA (UiPath, WorkFusion, Power Automate), AI-Assisted '
-             'Development, Process Optimization')
+             'AI-Assisted Development, Process Optimization')
     d.skills('Domains',
-             'Healthcare (payer), AdTech, with additional exposure to '
-             'InsurTech, E-Commerce, Manufacturing, SaaS, Enterprise AI '
+             'Healthcare (payer), AdTech, E-Commerce, SaaS, Enterprise AI '
              'Platforms')
 
     # ── Core Competencies ──────────────────────────────────────────
     d.section('CORE COMPETENCIES')
-    d.para('Product Vision & Roadmapping  |  Technical Project Management '
-           ' |  AI & ML Platform Delivery  |  Distributed Team Leadership '
-           '(International, Cross-Border)  |  Revenue Growth & Client '
-           'Expansion  |  Agile / SAFe / Scrum at Scale  |  RPA & Process '
-           'Automation  |  Risk, Scope & Budget Management',
+    d.para('Technical Project Management  |  Product Vision & '
+           'Roadmapping  |  AI & ML Platform Delivery  |  Distributed '
+           'Team Leadership (International, Cross-Border)  |  Revenue '
+           'Growth & Client Expansion  |  Agile / SAFe / Scrum at Scale '
+           ' |  RPA & Process Automation  |  Risk, Scope & Budget '
+           'Management',
            justify=False, gap=4)
 
     # ── Career Highlights ──────────────────────────────────────────
@@ -239,7 +238,7 @@ def main():
     for h in [
         '$6.5M+ in active client business managed; contributed to $4.5M+ '
         'in account growth (Macrosoft)',
-        '2 AI products shipped zero-to-production at Innovatix — '
+        '2 AI products shipped zero-to-production at Innovatix: '
         'OpenParser AI and Innovatix ATS (1,000+ resumes AI-parsed)',
         'Up to 47% reduction in delivery timelines via AI-assisted '
         'development at Innovatix',
@@ -260,17 +259,17 @@ def main():
     for b in [
         'I own and drive product vision, roadmap, and delivery for '
         'OpenParser AI, a RAG-based document intelligence platform with '
-        '30+ AI agents, across the full delivery lifecycle — project '
+        '30+ AI agents, across the full delivery lifecycle, project '
         'planning, engineering leadership, and go-to-market execution.',
-        'Built Innovatix ATS from the ground up — an AI-native '
+        'Built Innovatix ATS from the ground up, an AI-native '
         'applicant tracking platform now being productized for market '
         'launch. Personally developed the initial MVP through '
         'AI-assisted development, then led a lean team of one engineer '
         'and one QA to production.',
         'Shipped the ATS platform’s core AI capabilities: bulk resume '
         'parsing, candidate-job matching, and Teams-integrated '
-        'interviews with automated post-interview analysis — JD-match '
-        'scoring, competency assessment, hiring recommendations — '
+        'interviews with automated post-interview analysis, JD-match '
+        'scoring, competency assessment, hiring recommendations, '
         'letting non-technical interviewers evaluate candidates with '
         'technical rigor. 1,000+ resumes parsed to date.',
         'Leading 4 direct reports and 10+ indirect reports, applying '
@@ -285,8 +284,8 @@ def main():
     d.line('ASI (Advertising Specialty Institute)  |  June 2024 - June '
            '2025', font=FI, size=11, color=GREY, gap=7)
     for b in [
-        'Facilitated Agile ceremonies — sprint planning, daily '
-        'stand-ups, reviews, and retrospectives — for two '
+        'Facilitated Agile ceremonies, sprint planning, daily '
+        'stand-ups, reviews, and retrospectives for two '
         'cross-functional teams totaling 14-20 members.',
         'Led backlog refinement and retrospective sessions across 2-3 '
         'concurrent projects, driving continuous process improvement.',
@@ -304,7 +303,7 @@ def main():
            color=GREY, gap=7)
     for b in [
         'Managed 2-3 concurrent healthcare technology projects, serving '
-        'as primary point of contact for enterprise accounts — growing '
+        'as primary point of contact for enterprise accounts, growing '
         'managed client business to $6.5M+ and contributing $4.5M+ in '
         'account growth.',
         'Built AWS-native analytics workflows (Lambda, API Gateway, S3, '
@@ -327,11 +326,11 @@ def main():
     d.line('Cinnova Technologies, LLC  |  November 2021 - January 2023',
            font=FI, size=11, color=GREY, gap=7)
     for b in [
-        'Part-time consulting engagement carried alongside the full-time '
-        'Technical Project Manager role at Macrosoft above.',
+        'Part-time consulting engagement carried out alongside the '
+        'full-time Technical Project Manager role at Macrosoft above.',
         'Delivered web applications, APIs, and BI dashboards for '
-        'U.S.-based clients using Angular, .NET, and cloud-based '
-        'development workflows.',
+        'clients using Angular, .NET, and cloud-based development '
+        'workflows.',
     ]:
         d.bullet(b)
 
@@ -361,8 +360,7 @@ def main():
     d.para('Peter T. Paul College of Business & Economics, University of '
            'New Hampshire  |  August 2013 - December 2016  |  Durham, NH',
            font=FI, color=GREY, justify=False, gap=3.4)
-    d.para("GPA: 3.41  |  Dean's List Honors (Fall 2013, Spring 2014, "
-           "Fall 2014)  |  Dean's List HIGH Honors (Spring 2016)",
+    d.para("GPA: 3.41  |  Dean's List Honors",
            justify=False, gap=6.8)
 
     # ── Certifications ─────────────────────────────────────────────
