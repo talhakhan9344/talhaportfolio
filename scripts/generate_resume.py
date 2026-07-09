@@ -236,12 +236,12 @@ def main():
     d.section('CAREER HIGHLIGHTS')
     for h in [
         '$6.5M+ in active client business managed; contributed to $4.5M+ '
-        'in account growth (Macrosoft, 6-year tenure)',
+        'in account growth (Macrosoft)',
         '2 AI products shipped zero-to-production at Innovatix — '
         'OpenParser AI and Innovatix ATS (1,000+ resumes AI-parsed)',
         'Up to 47% reduction in delivery timelines via AI-assisted '
         'development at Innovatix',
-        '20% average under-budget delivery across managed projects',
+        '20%+ average under-budget delivery across managed projects',
         '4 direct reports, plus 10+ indirect reports coordinated at '
         'Innovatix',
         '3-5 concurrent AI, cloud & analytics projects delivered at any '
@@ -295,8 +295,7 @@ def main():
 
     d.gap(4)
     d.need(60)
-    d.line('Macrosoft  |  Total Tenure: ~6 Years', font=FB, size=9.3,
-           color=GREY, gap=7)
+    d.line('Macrosoft', font=FB, size=9.3, color=GREY, gap=7)
 
     d.line('Technical Project Manager', font=FB, size=9.3, gap=2.2)
     d.line('Macrosoft  |  January 2019 - June 2024', font=FI, size=8.3,
