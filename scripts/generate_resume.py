@@ -349,8 +349,6 @@ def main():
 
     d.gap(2)
     d.need(65)
-    d.line('Macrosoft', font=FB, size=10.5, color=GREY, gap=6)
-
     d.line('Technical Project Manager', font=FB, size=10.5, gap=2.5)
     d.line('Macrosoft  |  January 2019 - June 2024', font=FI, size=10,
            color=GREY, gap=6)
