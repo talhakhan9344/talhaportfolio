@@ -116,6 +116,59 @@ class Doc:
             self.y -= leading
         self.y -= 2
 
+    def bullets_two_col(self, items, col_gap=24):
+        """Lay out items in two columns: first half left, second half right."""
+        size, leading, indent = 10, 11.6, 11
+        half = (len(items) + 1) // 2
+        left_items, right_items = items[:half], items[half:]
+        col_w = (CONTENT_W - col_gap) / 2 - indent
+        prefix = '–  '
+        pw = stringWidth(prefix, F, size)
+
+        def wrap_col(col_items):
+            out = []
+            for text in col_items:
+                first = self.wrap(text, F, size, col_w - pw)
+                rest = ' '.join(first[1:])
+                lines = [first[0]] + (self.wrap(rest, F, size, col_w)
+                                      if rest else [])
+                out.append(lines)
+            return out
+
+        left_lines = wrap_col(left_items)
+        right_lines = wrap_col(right_items)
+        col_h = lambda ls: sum(len(l) for l in ls) * leading + len(ls) * 1.2
+        self.need(max(col_h(left_lines), col_h(right_lines)))
+        y0 = self.y
+
+        def draw_col(col_lines, x0):
+            y = y0
+            self.c.setFillColorRGB(*DARK)
+            for lines in col_lines:
+                for i, ln in enumerate(lines):
+                    x = x0 + indent
+                    w = col_w
+                    if i == 0:
+                        t = self.c.beginText(x, y)
+                        t.setFont(F, size)
+                        t.setWordSpace(0)
+                        t.textOut(prefix)
+                        self.c.drawText(t)
+                        x += pw
+                        w -= pw
+                    t2 = self.c.beginText(x, y)
+                    t2.setFont(F, size)
+                    t2.setWordSpace(0)
+                    t2.textOut(ln)
+                    self.c.drawText(t2)
+                    y -= leading
+                y -= 1.2
+            return y
+
+        y_left = draw_col(left_lines, MARGIN_X)
+        y_right = draw_col(right_lines, MARGIN_X + col_w + indent + col_gap)
+        self.y = min(y_left, y_right)
+
     def section(self, title):
         self.need(13 + 4.5 + 15 + 15)   # title + rule + first content
         self.y -= 2                      # extra air before a section
@@ -365,7 +418,7 @@ def main():
 
     # ── Certifications ─────────────────────────────────────────────
     d.section('CERTIFICATIONS & CREDENTIALS')
-    for cert in [
+    d.bullets_two_col([
         'PMP - Project Management Professional (PMI)',
         'PMI-ACP - Agile Certified Practitioner (PMI)',
         'SAFe 6 Agilist',
@@ -374,8 +427,7 @@ def main():
         'PSPO I - Professional Scrum Product Owner (Scrum.org)',
         'AWS Certified Cloud Practitioner',
         'Microsoft Data Science Professional Program - Microsoft',
-    ]:
-        d.bullet(cert)
+    ])
 
     d.save()
     print('wrote', out, '- pages:', d.page)
