@@ -187,186 +187,17 @@ def main():
     # ── Executive Summary ──────────────────────────────────────────
     d.section('EXECUTIVE SUMMARY')
     d.para(
-        'Technical Project Manager and product builder — I conceived '
-        'and shipped two AI products from zero to production: OpenParser '
-        'AI (enterprise document intelligence) and Innovatix ATS (an '
-        'AI-native recruitment platform now heading to market), owning '
-        'both from product vision through engineering leadership and '
-        'go-to-market. With 9+ years of professional experience (8+ in '
-        'technology), I’ve paired account stewardship with delivery '
-        'excellence across AI and Healthcare portfolios — leading '
-        'distributed teams across the U.S., Pakistan, and India, with '
+        'Technical Project Manager — currently at Innovatix Technology '
+        'Partners, where I lead AI-assisted development and end-to-end '
+        'product launches, from OpenParser AI (built on OpenAI and Llama '
+        '3 APIs) to the Innovatix ATS platform, using tools like Claude, '
+        'Cursor, and ChatGPT/Copilot across my team. With 9+ years of '
+        'professional experience (8+ in technology), I’ve paired account '
+        'stewardship with delivery excellence across AI and Healthcare '
+        'portfolios — leading international, cross-border teams, with '
         'the technical fluency to partner closely with engineering and '
         'the executive presence to align C-suite stakeholders, often in '
         'the same conversation.')
-
-    # ── Core Competencies ──────────────────────────────────────────
-    d.section('CORE COMPETENCIES')
-    d.line('Product Vision & Roadmapping  |  Technical Project '
-           'Management  |  AI & ML Platform Delivery', gap=2.9)
-    d.line('Distributed Team Leadership (US · Pakistan · India)  |  '
-           'Revenue Growth & Client Expansion  |  Agile / SAFe / Scrum '
-           'at Scale', gap=2.9)
-    d.line('RPA & Process Automation  |  Risk, Scope & Budget Management',
-           gap=2.9)
-
-    # ── Career Highlights ──────────────────────────────────────────
-    d.section('CAREER HIGHLIGHTS')
-    for h in [
-        '$6.5M+ in active client business managed; contributed to $4.5M+ '
-        'in account growth',
-        'Up to 47% reduction in delivery timelines via AI-assisted '
-        'development (since 2024)',
-        '2 AI products shipped zero-to-production — OpenParser AI '
-        'and Innovatix ATS (1,000+ resumes AI-parsed)',
-        '21% infrastructure cost reduction through legacy platform '
-        'modernization',
-        '20% average under-budget delivery across managed projects',
-        '6 direct reports, plus a broader team of 12+ coordinated across '
-        'functions',
-        '3-5 concurrent AI, cloud & analytics projects delivered at any '
-        'given time',
-    ]:
-        d.line(h, gap=5.4)
-
-    # ── Professional Experience ────────────────────────────────────
-    d.section('PROFESSIONAL EXPERIENCE')
-    d.line('Innovatix Technology Partners  |  Total Tenure: 8+ Years  |  '
-           'New Jersey, USA (Hybrid)', font=FI, size=8.3, color=GREY,
-           gap=8.7)
-
-    d.line('Technical Project Manager', font=FB, size=9.3, gap=2.2)
-    d.line('Innovatix Technology Partners  |  January 2019 - Present  |  '
-           'New Jersey, USA · Hybrid', font=FI, size=8.3, color=GREY,
-           gap=5.7)
-    for b in [
-        'Conceived and drove product vision, roadmap, and delivery for '
-        'OpenParser AI, a RAG-based document intelligence platform with '
-        '30+ AI agents — owning project planning, engineering '
-        'leadership, and go-to-market execution across the full delivery '
-        'lifecycle.',
-        'Served as the primary point of contact for requirements, '
-        'expectations, and contractual delivery across enterprise '
-        'accounts spanning data & analytics, healthcare intelligence, '
-        'and healthcare payer clients — pairing account stewardship '
-        'with delivery excellence to drive $4.5M+ in account growth.',
-        'Led 6 direct reports and coordinated a broader team of 12+ '
-        'across the U.S., Pakistan, and India — engineers, QA '
-        'analysts, and data scientists — improving team velocity by '
-        '33% through Agile KPIs, sprint governance, and structured '
-        'capacity planning.',
-        'Managed 3-5 concurrent projects in production at any given time '
-        '— partnering directly with C-suite and director-level '
-        'stakeholders against high-stakes delivery timelines, and '
-        'consistently delivering on time, within scope, and under '
-        'budget.',
-        'Built Innovatix ATS from the ground up (2025-present) — an '
-        'AI-native applicant tracking platform now being productized for '
-        'market launch. Personally developed the initial MVP through '
-        'AI-assisted development, then led a lean team (1 engineer, 1 '
-        'QA) to production, owning product vision, roadmap, and release '
-        'management end to end.',
-        'Shipped the ATS platform’s AI capabilities — bulk AI '
-        'resume parsing, AI candidate-job matching, and Microsoft '
-        'Teams-integrated interviews with automated post-interview AI '
-        'analysis (JD-match scoring, competency assessments, hiring '
-        'recommendations) — enabling non-technical interviewers to '
-        'technically evaluate candidates, with 1,000+ resumes AI-parsed '
-        'to date.',
-        'Since 2024, leveraged AI-assisted development to accelerate '
-        'delivery timelines by up to 47%, meaningfully reducing project '
-        'costs in the process, and establishing a repeatable '
-        'AI-augmented delivery model across the organization.',
-        'Implemented structured risk, issue, and dependency management '
-        'frameworks that prevented three major delivery delays, '
-        'protecting revenue-critical client commitments.',
-        'Led modernization of a legacy claims and provider onboarding '
-        'platform to .NET and AWS, reducing infrastructure spend by 21% '
-        'and cutting release cycles from 2 weeks to 1 day.',
-        'Built AWS-native analytics workflows (Lambda, API Gateway, S3, '
-        'RDS) enabling secure, compliant data processing for AdTech and '
-        'HealthTech clients.',
-    ]:
-        d.bullet(b)
-
-    d.gap(4)
-    d.need(60)  # keep role header with its first bullet
-    d.line('Data Scientist', font=FB, size=9.3, gap=2.2)
-    d.line('Innovatix Technology Partners  |  July 2018 - December 2018 '
-           ' |  Remote · Internal Rotation', font=FI, size=8.3,
-           color=GREY, gap=5.7)
-    for b in [
-        'Led analytics development for an out-of-home AdTech platform '
-        'client, delivering the full end-to-end analytics stack 2 months '
-        'ahead of schedule (5-month project completed in 3).',
-        'Built ML models for claims classification and provider '
-        'segmentation using Python, Pandas, and Scikit-Learn, achieving '
-        '12-18% accuracy improvements over prior baselines.',
-        'Developed executive-grade BI dashboards (Power BI, Tableau, '
-        'QuickSight) enabling KPI tracking across 20+ enterprise '
-        'clients; implemented speech analytics via CallMiner resulting '
-        'in 15% call-center efficiency gain.',
-    ]:
-        d.bullet(b)
-
-    d.gap(4)
-    d.need(60)
-    d.line('Senior Software Engineer (Consulting) - Concurrent, '
-           'Part-Time', font=FB, size=9.3, gap=2.2)
-    d.line('Cinnova Technologies, LLC  |  November 2021 - January 2023  '
-           '|  Remote', font=FI, size=8.3, color=GREY, gap=5.7)
-    for b in [
-        'Part-time consulting engagement carried alongside the full-time '
-        'Technical Project Manager role at Innovatix above.',
-        'Delivered web applications, APIs, and BI dashboards for '
-        'U.S.-based clients using Angular, .NET, and cloud-based '
-        'development workflows.',
-    ]:
-        d.bullet(b)
-
-    # ── Early Career ───────────────────────────────────────────────
-    d.section('EARLY CAREER')
-    d.para('Founder & CEO, Grounded Sax Nature, Inc.  |  Jul 2017 '
-           '– Apr 2018 — Founded an eco-friendly apparel '
-           'startup (eucalyptus-based denim); business plan through '
-           'incorporation and distribution outreach.', size=8.3,
-           leading=11.5, gap=3.4, justify=False)
-    d.para('RPA Analyst, Accelirate, Inc.  |  Mar 2017 – Jun 2017 '
-           '— Built RPA workflow POCs for financial data processes '
-           '(Mark-to-Market, AR/GL, invoice entry).', size=8.3,
-           leading=11.5, gap=3.4, justify=False)
-
-    # ── Education ──────────────────────────────────────────────────
-    d.section('EDUCATION')
-    d.line('BS in Business Administration - Accounting & Finance, Minor '
-           'in Economics', font=FB, size=9.3, gap=2.2)
-    d.line('Peter T. Paul College of Business & Economics, University of '
-           'New Hampshire  |  August 2013 - December 2016  |  Durham, NH',
-           font=FI, size=8.3, color=GREY, gap=2.7)
-    d.line("GPA: 3.41  |  Dean's List Honors (Fall 2013, Spring 2014, "
-           "Fall 2014)  |  Dean's List HIGH Honors (Spring 2016)",
-           size=8.3, gap=5.4)
-
-    # ── Certifications ─────────────────────────────────────────────
-    d.section('CERTIFICATIONS & CREDENTIALS')
-    for cert in [
-        'PMP - Project Management Professional (PMI)',
-        'PMI-ACP - Agile Certified Practitioner (PMI)',
-        'SAFe 6 Agilist',
-        'SAFe 6 Scrum Master',
-        'PSM I - Professional Scrum Master (Scrum.org)',
-        'PSPO I - Professional Scrum Product Owner (Scrum.org)',
-        'AWS Certified Cloud Practitioner',
-        'AI Product Management - Certificate, Duke University (Coursera)',
-    ]:
-        d.bullet(cert)
-    d.gap(2)
-    d.para('Additional credentials: AWS Technical Professional & Cloud '
-           'Economics Accredited (AWS partner training) - Microsoft Data '
-           'Science Professional Program & Power Platform Fundamentals - '
-           'Python Programmer (DataCamp) - UiPath RPA Developer - '
-           'WorkFusion Power User - CallMiner BI Analyst+', size=8.3,
-           leading=11.5, gap=3.4, justify=False)
 
     # ── Technical Skills ───────────────────────────────────────────
     d.section('TECHNICAL SKILLS')
@@ -391,10 +222,165 @@ def main():
              'InsurTech, E-Commerce, Manufacturing, SaaS, Enterprise AI '
              'Platforms')
 
-    # ── Languages ──────────────────────────────────────────────────
-    d.section('LANGUAGES')
-    d.line('English (Native/Bilingual)  |  Urdu (Native/Bilingual)  |  '
-           'Punjabi (Full Professional)', gap=5.4)
+    # ── Core Competencies ──────────────────────────────────────────
+    d.section('CORE COMPETENCIES')
+    d.line('Product Vision & Roadmapping  |  Technical Project '
+           'Management  |  AI & ML Platform Delivery', gap=2.9)
+    d.line('Distributed Team Leadership (International, Cross-Border)  |  '
+           'Revenue Growth & Client Expansion  |  Agile / SAFe / Scrum '
+           'at Scale', gap=2.9)
+    d.line('RPA & Process Automation  |  Risk, Scope & Budget Management',
+           gap=2.9)
+
+    # ── Career Highlights ──────────────────────────────────────────
+    d.section('CAREER HIGHLIGHTS')
+    for h in [
+        '$6.5M+ in active client business managed; contributed to $4.5M+ '
+        'in account growth (Macrosoft, 6-year tenure)',
+        '2 AI products shipped zero-to-production at Innovatix — '
+        'OpenParser AI and Innovatix ATS (1,000+ resumes AI-parsed)',
+        'Up to 47% reduction in delivery timelines via AI-assisted '
+        'development at Innovatix',
+        '21% infrastructure cost reduction through legacy platform '
+        'modernization',
+        '20% average under-budget delivery across managed projects',
+        '4 direct reports, plus 10+ indirect reports coordinated at '
+        'Innovatix',
+        '3-5 concurrent AI, cloud & analytics projects delivered at any '
+        'given time',
+    ]:
+        d.line(h, gap=5.4)
+
+    # ── Professional Experience ────────────────────────────────────
+    d.section('PROFESSIONAL EXPERIENCE')
+
+    d.line('Technical Project Manager', font=FB, size=9.3, gap=2.2)
+    d.line('Innovatix Technology Partners  |  July 2025 - Present  |  '
+           'New Jersey, USA', font=FI, size=8.3, color=GREY, gap=5.7)
+    for b in [
+        'I own and drive product vision, roadmap, and delivery for '
+        'OpenParser AI, a RAG-based document intelligence platform with '
+        '30+ AI agents, across the full delivery lifecycle — project '
+        'planning, engineering leadership, and go-to-market execution.',
+        'Built Innovatix ATS from the ground up — an AI-native '
+        'applicant tracking platform now being productized for market '
+        'launch. Personally developed the initial MVP through '
+        'AI-assisted development, then led a lean team of one engineer '
+        'and one QA to production.',
+        'Shipped the ATS platform’s core AI capabilities: bulk resume '
+        'parsing, candidate-job matching, and Teams-integrated '
+        'interviews with automated post-interview analysis — JD-match '
+        'scoring, competency assessment, hiring recommendations — '
+        'letting non-technical interviewers evaluate candidates with '
+        'technical rigor. 1,000+ resumes parsed to date.',
+        'Leading 4 direct reports and 10+ indirect reports, applying '
+        'AI-assisted development to cut delivery timelines by up to '
+        '47% and establish a repeatable AI-augmented delivery model.',
+    ]:
+        d.bullet(b)
+
+    d.gap(4)
+    d.need(60)
+    d.line('Scrum Master', font=FB, size=9.3, gap=2.2)
+    d.line('ASI (Advertising Specialty Institute)  |  June 2024 - June '
+           '2025', font=FI, size=8.3, color=GREY, gap=5.7)
+    for b in [
+        'Facilitated Agile ceremonies — sprint planning, daily '
+        'stand-ups, reviews, and retrospectives — for two '
+        'cross-functional teams totaling 14-20 members.',
+        'Led backlog refinement and retrospective sessions across 2-3 '
+        'concurrent projects, driving continuous process improvement.',
+        'Partnered with product owners and stakeholders to maintain '
+        'sprint predictability and team velocity across both teams.',
+    ]:
+        d.bullet(b)
+
+    d.gap(4)
+    d.need(60)
+    d.line('Macrosoft  |  Total Tenure: ~6 Years', font=FB, size=9.3,
+           color=GREY, gap=7)
+
+    d.line('Technical Project Manager', font=FB, size=9.3, gap=2.2)
+    d.line('Macrosoft  |  January 2019 - June 2024', font=FI, size=8.3,
+           color=GREY, gap=5.7)
+    for b in [
+        'Managed 2-3 concurrent healthcare technology projects, serving '
+        'as primary point of contact for enterprise accounts — growing '
+        'managed client business to $6.5M+ and contributing $4.5M+ in '
+        'account growth.',
+        'Legacy claims and provider onboarding platform modernization '
+        'to .NET and AWS was mine to lead — reducing infrastructure '
+        'spend by 21% and cutting release cycles from 2 weeks to 1 day.',
+        'Built AWS-native analytics workflows (Lambda, API Gateway, S3, '
+        'RDS) enabling secure, compliant data processing for healthcare '
+        'clients.',
+        'An international team came together under my coordination, '
+        'improving velocity by 33% through Agile KPIs, sprint '
+        'governance, and structured capacity planning.',
+        'Partnered directly with C-suite and director-level '
+        'stakeholders across a 3-5 project portfolio; the risk and '
+        'dependency management frameworks I put in place prevented '
+        'three major delivery delays.',
+    ]:
+        d.bullet(b)
+
+    d.gap(4)
+    d.need(60)
+    d.line('Senior Software Engineer (Consulting) - Concurrent, '
+           'Part-Time', font=FB, size=9.3, gap=2.2)
+    d.line('Cinnova Technologies, LLC  |  November 2021 - January 2023',
+           font=FI, size=8.3, color=GREY, gap=5.7)
+    for b in [
+        'Part-time consulting engagement carried alongside the full-time '
+        'Technical Project Manager role at Macrosoft above.',
+        'Delivered web applications, APIs, and BI dashboards for '
+        'U.S.-based clients using Angular, .NET, and cloud-based '
+        'development workflows.',
+    ]:
+        d.bullet(b)
+
+    d.gap(4)
+    d.need(60)
+    d.line('Data Scientist', font=FB, size=9.3, gap=2.2)
+    d.line('Macrosoft  |  July 2018 - December 2018  |  Internal '
+           'Rotation', font=FI, size=8.3, color=GREY, gap=5.7)
+    for b in [
+        'Led analytics development for an out-of-home AdTech platform '
+        'client, delivering the full end-to-end analytics stack 2 months '
+        'ahead of schedule (5-month project completed in 3).',
+        'Built ML models for claims classification and provider '
+        'segmentation using Python, Pandas, and Scikit-Learn, achieving '
+        '12-18% accuracy improvements over prior baselines.',
+        'Developed executive-grade BI dashboards (Power BI, Tableau, '
+        'QuickSight) enabling KPI tracking across 20+ enterprise '
+        'clients; implemented speech analytics via CallMiner resulting '
+        'in 15% call-center efficiency gain.',
+    ]:
+        d.bullet(b)
+
+    # ── Education ──────────────────────────────────────────────────
+    d.section('EDUCATION')
+    d.line('BS in Business Administration - Accounting & Finance, Minor '
+           'in Economics', font=FB, size=9.3, gap=2.2)
+    d.line('Peter T. Paul College of Business & Economics, University of '
+           'New Hampshire  |  August 2013 - December 2016  |  Durham, NH',
+           font=FI, size=8.3, color=GREY, gap=2.7)
+    d.line("GPA: 3.41  |  Dean's List Honors (Fall 2013, Spring 2014, "
+           "Fall 2014)  |  Dean's List HIGH Honors (Spring 2016)",
+           size=8.3, gap=5.4)
+
+    # ── Certifications ─────────────────────────────────────────────
+    d.section('CERTIFICATIONS & CREDENTIALS')
+    for cert in [
+        'PMP - Project Management Professional (PMI)',
+        'PMI-ACP - Agile Certified Practitioner (PMI)',
+        'SAFe 6 Agilist',
+        'SAFe 6 Scrum Master',
+        'PSM I - Professional Scrum Master (Scrum.org)',
+        'PSPO I - Professional Scrum Product Owner (Scrum.org)',
+        'AWS Certified Cloud Practitioner',
+    ]:
+        d.bullet(cert)
 
     d.save()
     print('wrote', out, '- pages:', d.page)
