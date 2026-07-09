@@ -241,8 +241,6 @@ def main():
         'OpenParser AI and Innovatix ATS (1,000+ resumes AI-parsed)',
         'Up to 47% reduction in delivery timelines via AI-assisted '
         'development at Innovatix',
-        '21% infrastructure cost reduction through legacy platform '
-        'modernization',
         '20% average under-budget delivery across managed projects',
         '4 direct reports, plus 10+ indirect reports coordinated at '
         'Innovatix',
@@ -308,9 +306,6 @@ def main():
         'as primary point of contact for enterprise accounts — growing '
         'managed client business to $6.5M+ and contributing $4.5M+ in '
         'account growth.',
-        'Legacy claims and provider onboarding platform modernization '
-        'to .NET and AWS was mine to lead — reducing infrastructure '
-        'spend by 21% and cutting release cycles from 2 weeks to 1 day.',
         'Built AWS-native analytics workflows (Lambda, API Gateway, S3, '
         'RDS) enabling secure, compliant data processing for healthcare '
         'clients.',
