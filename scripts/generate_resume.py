@@ -48,8 +48,10 @@ class Doc:
     def _text(self, x, ln, font, size, wordspace=0):
         t = self.c.beginText(x, self.y)
         t.setFont(font, size)
-        if wordspace:
-            t.setWordSpace(wordspace)
+        # Tw is graphics state, not reset by BT/beginText -- always set
+        # it explicitly (including 0) or a prior justified line's
+        # word-spacing silently bleeds into every later draw.
+        t.setWordSpace(wordspace)
         t.textOut(ln)
         self.c.drawText(t)
 
@@ -79,8 +81,8 @@ class Doc:
             if i < len(lines) - 1:
                 self.y -= leading
 
-    def para(self, text, font=F, size=8.7, leading=11.6, color=DARK,
-             gap=2.9, justify=True, indent=0):
+    def para(self, text, font=F, size=11, leading=15, color=DARK,
+             gap=4, justify=True, indent=0):
         width = CONTENT_W - indent
         lines = self.wrap(text, font, size, width)
         self.need(len(lines) * leading + gap)
@@ -89,7 +91,7 @@ class Doc:
         self.y -= leading + gap
 
     def bullet(self, text):
-        size, leading, indent = 8.5, 11.2, 10
+        size, leading, indent = 11, 14.5, 12
         width = CONTENT_W - indent
         prefix = '–  '
         pw = stringWidth(prefix, F, size)
@@ -98,7 +100,7 @@ class Doc:
         rest = ' '.join(first[1:])
         lines = [first[0]] + (self.wrap(rest, F, size, width)
                               if rest else [])
-        self.need(len(lines) * leading + 2.6)
+        self.need(len(lines) * leading + 3.5)
         self.c.setFillColorRGB(*DARK)
         for i, ln in enumerate(lines):
             x = MARGIN_X + indent
@@ -112,21 +114,21 @@ class Doc:
                 ws = (w - stringWidth(ln, F, size)) / ln.count(' ')
             self._text(x, ln, F, size, ws)
             self.y -= leading
-        self.y -= 2.6
+        self.y -= 3.5
 
     def section(self, title):
-        self.need(13 + 4.6 + 14.7 + 24)   # title + rule + first content
-        self.y -= 2                        # extra air before a section
+        self.need(15 + 5.5 + 18 + 26)   # title + rule + first content
+        self.y -= 3                        # extra air before a section
         self.c.setFillColorRGB(*DARK)
-        self.c.setFont(FB, 10.5)
+        self.c.setFont(FB, 13)
         self.c.drawString(MARGIN_X, self.y, title)
-        self.y -= 4.6 + 2.5
+        self.y -= 5.5 + 3
         self.c.setLineWidth(0.6)
         self.c.setStrokeColorRGB(*GOLD)
         self.c.line(MARGIN_X, self.y, MARGIN_X + CONTENT_W, self.y)
-        self.y -= 14.7
+        self.y -= 18
 
-    def line(self, text, font=F, size=8.7, color=DARK, gap=5.4):
+    def line(self, text, font=F, size=11, color=DARK, gap=7):
         self.need(size + gap)
         self.c.setFont(font, size)
         self.c.setFillColorRGB(*color)
@@ -134,7 +136,7 @@ class Doc:
         self.y -= size + gap
 
     def skills(self, label, text):
-        size, leading = 8.7, 11.6
+        size, leading = 11, 15
         lbl = label + ':  '
         lbl_w = stringWidth(lbl, FB, size)
         first_w = CONTENT_W - lbl_w
@@ -175,14 +177,14 @@ def main():
 
     # ── Header ─────────────────────────────────────────────────────
     d.c.setFillColorRGB(*DARK)
-    d.c.setFont(FB, 20)
+    d.c.setFont(FB, 24)
     d.c.drawString(MARGIN_X, d.y, 'TALHA KHAN')
-    d.y -= 15
+    d.y -= 19
     d.line('Technical Project Manager  |  AI Product & Platform Delivery'
-           '  |  Healthcare', size=10.5, color=GOLD, gap=2.5)
+           '  |  Healthcare', size=13, color=GOLD, gap=4)
     d.line('New Jersey, USA  |  talha.khan9344@gmail.com  |  '
            '(848) 348-1267  |  linkedin.com/in/talhakhan9344',
-           size=8.5, color=GREY, gap=5)
+           size=11, color=GREY, gap=7)
 
     # ── Executive Summary ──────────────────────────────────────────
     d.section('EXECUTIVE SUMMARY')
@@ -224,16 +226,16 @@ def main():
 
     # ── Core Competencies ──────────────────────────────────────────
     d.section('CORE COMPETENCIES')
-    d.line('Product Vision & Roadmapping  |  Technical Project '
-           'Management  |  AI & ML Platform Delivery', gap=2.9)
-    d.line('Distributed Team Leadership (International, Cross-Border)  |  '
-           'Revenue Growth & Client Expansion  |  Agile / SAFe / Scrum '
-           'at Scale', gap=2.9)
-    d.line('RPA & Process Automation  |  Risk, Scope & Budget Management',
-           gap=2.9)
+    d.para('Product Vision & Roadmapping  |  Technical Project Management '
+           ' |  AI & ML Platform Delivery  |  Distributed Team Leadership '
+           '(International, Cross-Border)  |  Revenue Growth & Client '
+           'Expansion  |  Agile / SAFe / Scrum at Scale  |  RPA & Process '
+           'Automation  |  Risk, Scope & Budget Management',
+           justify=False, gap=4)
 
     # ── Career Highlights ──────────────────────────────────────────
     d.section('CAREER HIGHLIGHTS')
+    d.need(160)  # keep the highlight list from orphaning its last line
     for h in [
         '$6.5M+ in active client business managed; contributed to $4.5M+ '
         'in account growth (Macrosoft)',
@@ -247,14 +249,14 @@ def main():
         '3-5 concurrent AI, cloud & analytics projects delivered at any '
         'given time',
     ]:
-        d.line(h, gap=5.4)
+        d.para(h, justify=False, gap=6.8)
 
     # ── Professional Experience ────────────────────────────────────
     d.section('PROFESSIONAL EXPERIENCE')
 
-    d.line('Technical Project Manager', font=FB, size=9.3, gap=2.2)
+    d.line('Technical Project Manager', font=FB, size=11.5, gap=2.8)
     d.line('Innovatix Technology Partners  |  July 2025 - Present  |  '
-           'New Jersey, USA', font=FI, size=8.3, color=GREY, gap=5.7)
+           'New Jersey, USA', font=FI, size=11, color=GREY, gap=7)
     for b in [
         'I own and drive product vision, roadmap, and delivery for '
         'OpenParser AI, a RAG-based document intelligence platform with '
@@ -277,11 +279,11 @@ def main():
     ]:
         d.bullet(b)
 
-    d.gap(4)
-    d.need(60)
-    d.line('Scrum Master', font=FB, size=9.3, gap=2.2)
+    d.gap(6)
+    d.need(75)
+    d.line('Scrum Master', font=FB, size=11.5, gap=2.8)
     d.line('ASI (Advertising Specialty Institute)  |  June 2024 - June '
-           '2025', font=FI, size=8.3, color=GREY, gap=5.7)
+           '2025', font=FI, size=11, color=GREY, gap=7)
     for b in [
         'Facilitated Agile ceremonies — sprint planning, daily '
         'stand-ups, reviews, and retrospectives — for two '
@@ -293,13 +295,13 @@ def main():
     ]:
         d.bullet(b)
 
-    d.gap(4)
-    d.need(60)
-    d.line('Macrosoft', font=FB, size=9.3, color=GREY, gap=7)
+    d.gap(6)
+    d.need(75)
+    d.line('Macrosoft', font=FB, size=11.5, color=GREY, gap=7)
 
-    d.line('Technical Project Manager', font=FB, size=9.3, gap=2.2)
-    d.line('Macrosoft  |  January 2019 - June 2024', font=FI, size=8.3,
-           color=GREY, gap=5.7)
+    d.line('Technical Project Manager', font=FB, size=11.5, gap=2.8)
+    d.line('Macrosoft  |  January 2019 - June 2024', font=FI, size=11,
+           color=GREY, gap=7)
     for b in [
         'Managed 2-3 concurrent healthcare technology projects, serving '
         'as primary point of contact for enterprise accounts — growing '
@@ -318,12 +320,12 @@ def main():
     ]:
         d.bullet(b)
 
-    d.gap(4)
-    d.need(60)
+    d.gap(6)
+    d.need(75)
     d.line('Senior Software Engineer (Consulting) - Concurrent, '
-           'Part-Time', font=FB, size=9.3, gap=2.2)
+           'Part-Time', font=FB, size=11.5, gap=2.8)
     d.line('Cinnova Technologies, LLC  |  November 2021 - January 2023',
-           font=FI, size=8.3, color=GREY, gap=5.7)
+           font=FI, size=11, color=GREY, gap=7)
     for b in [
         'Part-time consulting engagement carried alongside the full-time '
         'Technical Project Manager role at Macrosoft above.',
@@ -333,11 +335,11 @@ def main():
     ]:
         d.bullet(b)
 
-    d.gap(4)
-    d.need(60)
-    d.line('Data Scientist', font=FB, size=9.3, gap=2.2)
+    d.gap(6)
+    d.need(75)
+    d.line('Data Scientist', font=FB, size=11.5, gap=2.8)
     d.line('Macrosoft  |  July 2018 - December 2018  |  Internal '
-           'Rotation', font=FI, size=8.3, color=GREY, gap=5.7)
+           'Rotation', font=FI, size=11, color=GREY, gap=7)
     for b in [
         'Led analytics development for an out-of-home AdTech platform '
         'client, delivering the full end-to-end analytics stack 2 months '
@@ -355,13 +357,13 @@ def main():
     # ── Education ──────────────────────────────────────────────────
     d.section('EDUCATION')
     d.line('BS in Business Administration - Accounting & Finance, Minor '
-           'in Economics', font=FB, size=9.3, gap=2.2)
-    d.line('Peter T. Paul College of Business & Economics, University of '
+           'in Economics', font=FB, size=11.5, gap=2.8)
+    d.para('Peter T. Paul College of Business & Economics, University of '
            'New Hampshire  |  August 2013 - December 2016  |  Durham, NH',
-           font=FI, size=8.3, color=GREY, gap=2.7)
-    d.line("GPA: 3.41  |  Dean's List Honors (Fall 2013, Spring 2014, "
+           font=FI, color=GREY, justify=False, gap=3.4)
+    d.para("GPA: 3.41  |  Dean's List Honors (Fall 2013, Spring 2014, "
            "Fall 2014)  |  Dean's List HIGH Honors (Spring 2016)",
-           size=8.3, gap=5.4)
+           justify=False, gap=6.8)
 
     # ── Certifications ─────────────────────────────────────────────
     d.section('CERTIFICATIONS & CREDENTIALS')
