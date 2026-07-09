@@ -419,14 +419,14 @@ def main():
     # ── Certifications ─────────────────────────────────────────────
     d.section('CERTIFICATIONS & CREDENTIALS')
     d.bullets_two_col([
-        'PMP - Project Management Professional (PMI)',
-        'PMI-ACP - Agile Certified Practitioner (PMI)',
+        'PMP - Project Management Professional',
+        'PMI-ACP - Agile Certified Practitioner',
         'SAFe 6 Agilist',
         'SAFe 6 Scrum Master',
-        'PSM I - Professional Scrum Master (Scrum.org)',
-        'PSPO I - Professional Scrum Product Owner (Scrum.org)',
+        'PSM I - Professional Scrum Master',
+        'PSPO I - Professional Scrum Product Owner',
         'AWS Certified Cloud Practitioner',
-        'Microsoft Data Science Professional Program - Microsoft',
+        'Microsoft Data Science Professional Program',
     ])
 
     d.save()
